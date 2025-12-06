@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>NEURA — Assistente</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <canvas id="particles"></canvas>
+  <header class="top small">
+    <img src="assets/logo.svg" alt="Neura" class="logo" />
+    <nav>
+      <a href="index.html">Início</a>
+      <a href="assistant.html">Assistente</a>
+      <a href="agents.html">Agentes</a>
+      <a href="editor.html">Criador de Apps</a>
+    </nav>
+  </header>
+
+  <main class="panel">
+    <h2>NEURA ASSISTENTE</h2>
+    <p>Converse com a NEURA (respostas simuladas neste MVP).</p>
+    <div class="chat" id="chat"></div>
+    <div class="composer">
+      <input id="msg" placeholder="Escreva sua pergunta..." />
+      <button id="send">Enviar</button>
+      <button id="rec">🎤</button>
+    </div>
+  </main>
+
+  <script>
+  // Simple client-side simulated assistant (mock responses)
+  const chat = document.getElementById('chat');
+  const msg = document.getElementById('msg');
+  document.getElementById('send').addEventListener('click', ()=>{
+    const t = msg.value.trim(); if(!t) return; addMessage('Você', t); msg.value=''; setTimeout(()=> addMessage('NEURA', 'Chefe, respondo em breve (mock): '+t), 800);
+  });
+  function addMessage(who, text){ const d = document.createElement('div'); d.className='bubble '+(who==='Você'?'me':'bot'); d.innerHTML = '<strong>'+who+'</strong><div>'+text+'</div>'; chat.appendChild(d); chat.scrollTop = chat.scrollHeight; }
+  </script>
+  <script src="particles.js"></script>
+</body>
+</html>

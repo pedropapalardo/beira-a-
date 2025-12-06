@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
+:root{--bg:#030416;--card:rgba(255,255,255,0.04);--neon1:#7c3aed;--neon2:#06b6d4}
+*{box-sizing:border-box}
+body{margin:0;font-family:Inter,system-ui,Arial;background:linear-gradient(180deg,#02030a 0%, #061029 60%);color:#e6e6ff}
+canvas{position:fixed;left:0;top:0;width:100%;height:100%;z-index:0}
+.top{position:relative;z-index:2;display:flex;align-items:center;justify-content:space-between;padding:18px 40px}
+.logo{height:36px}
+nav a{color:#cfe9ff;text-decoration:none;margin-left:18px}
+.hero{position:relative;z-index:2;max-width:1100px;margin:80px auto 40px;padding:36px;border-radius:14px;background:linear-gradient(135deg, rgba(124,58,237,0.06), rgba(6,182,212,0.03));text-align:center}
+.hero h1{font-size:40px;margin:0 0 8px}
+.actions{margin-top:18px}
+.btn{padding:12px 20px;border-radius:10px;background:linear-gradient(90deg,var(--neon1),var(--neon2));color:#fff;text-decoration:none}
+.btn.outline{background:transparent;border:1px solid rgba(255,255,255,0.06);margin-left:12px}
+.features{display:flex;gap:18px;max-width:1100px;margin:20px auto}
+.card{flex:1;background:rgba(255,255,255,0.02);padding:18px;border-radius:12px}
+.panel{position:relative;z-index:2;max-width:1000px;margin:40px auto;background:rgba(255,255,255,0.02);padding:20px;border-radius:12px}
+.chat{min-height:240px;max-height:400px;overflow:auto;padding:12px;background:rgba(0,0,0,0.2);border-radius:10px}
+.bubble{margin:8px 0;padding:10px;border-radius:8px;display:inline-block}
+.bubble.me{background:linear-gradient(90deg,#0ea5e9,#7c3aed);color:#000;margin-left:auto}
+.composer{display:flex;gap:8px;margin-top:12px}
+.composer input{flex:1;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:#fff}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.tile{background:rgba(255,255,255,0.03);padding:12px;border-radius:8px}
+.template{background:rgba(255,255,255,0.03);padding:18px;border-radius:10px;margin:8px 0}
+.foot{color:#99a3b3;text-align:center;margin:48px 0}
